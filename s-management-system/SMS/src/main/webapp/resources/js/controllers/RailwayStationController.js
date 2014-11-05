@@ -4,7 +4,7 @@
  * RailwayStationController
  * @constructor
  */
-var RailwayStationController = function($scope, $http) {
+var RailwayStationController = function($scope, $http, $window,$rootScope) {
     $scope.rs = {};
     $scope.editMode = false;
 

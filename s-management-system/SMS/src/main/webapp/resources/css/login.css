@@ -1,0 +1,37 @@
+.Mylogin-box{
+	background: url(login_bg.png) repeat-x;
+font-size: 12px;
+height: 200px;
+line-height: 12px;
+padding-top: 60px;
+position: relative;
+
+border-radius: 4px;
+box-shadow: 0px 0px 8px #272626;
+}
+.content-outer {
+background: url(content_repeat.jpg) repeat-x;
+background-color: white;
+}
+
+.admission-table {
+    width:100%;
+}
+.admission-table, th, td {
+    border: 1px solid black;
+    border-collapse: separate;
+}
+.admission-table th, td {
+    padding: 5px;
+    text-align: left;
+}
+.admission-table tr:nth-child(even) {
+    background-color: #eee;
+}
+.admission-table tr:nth-child(odd) {
+   background-color:#fff;
+}
+.admission-table th	{
+    background-color: black;
+    color: white;
+}
