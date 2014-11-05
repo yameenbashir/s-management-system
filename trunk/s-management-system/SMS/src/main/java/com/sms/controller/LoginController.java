@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sms.beans.Login;
-import com.sms.beans.Train;
+
 import com.sms.service.LoginService;
 
 @Controller
@@ -23,8 +23,8 @@ public class LoginController {
 	private LoginService loginService;
 	
 	@RequestMapping(value = "/validateUser", method = RequestMethod.POST)
-    public @ResponseBody void validateUser(@RequestBody Login login) {
-		loginService.validateUser(login);
+    public @ResponseBody boolean validateUser(@RequestBody Login login) {
+		return loginService.validateUser(login);
     }
 //	@RequestMapping(value = "/addTrain", method = RequestMethod.POST)
 //    public @ResponseBody void addTrain(@RequestBody Train train) {
