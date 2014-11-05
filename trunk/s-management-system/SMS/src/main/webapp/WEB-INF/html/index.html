@@ -4,30 +4,43 @@
     <meta charset="utf-8">
     <title>SMS-Login</title>
     <link rel="stylesheet" href="resources/css/app.css"/>
+    <link rel="stylesheet" href="resources/css/login.css"/>
     <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css" />
 </head>
-<body>
+<body background="black">
+<div class="content-outer">
 <div id="wrapper">
-	<div >
-		<ul class="menu">
-	        <li><a href="#/cars">Cars</a></li>
-	        <li><a href="#/trains">Trains</a></li>
-	        <li><a href="#/railwaystations">Railway Station</a></li>
-	    </ul>
+	<div >SMS</div>
+	
+	<div ng-show="IsLoggedIn == true">
+		<div style="text=align:right;"><a href="#/logins">logged out</a></div>
+		<div >
+			<ul class="menu">
+	        	<li><a href="#/students">Home</a></li>
+	        	<li><a href="#/trains">Students</a></li>
+	        	<li><a href="#/railwaystations">Courses</a></li>
+	        	<li><a href="#/cars">Examination</a></li>
+	        	<li><a href="#/trains">Absences</a></li>
+	        	<li><a href="#/railwaystations">Time Table Management</a></li>
+	        	<li><a href="#/cars">Fees</a></li>
+	        	<li><a href="#/trains">Reports</a></li>
+	        	<li><a href="#/railwaystations">Settings</a></li>
+	    	</ul>
 	    </div>
-    
-    <hr class="" />
+    </div>
+   
     <div ng-view></div>
-
 </div>
-
+</div>
 <script src="resources/js/lib/angular/angular.js"></script>
+<script src="resources/js/lib/angular/angular-cookies.js"></script>
 <script src="resources/js/app.js"></script>
 <script src="resources/js/services.js"></script>
 <script src="resources/js/controllers/RailwayStationController.js"></script>
 <script src="resources/js/controllers/CarController.js"></script>
 <script src="resources/js/controllers/TrainController.js"></script>
 <script src="resources/js/controllers/LoginController.js"></script>
+<script src="resources/js/controllers/StudentsControllers/StudentsListController.js"></script>
 <script src="resources/js/filters.js"></script>
 <script src="resources/js/directives.js"></script>
 </body>

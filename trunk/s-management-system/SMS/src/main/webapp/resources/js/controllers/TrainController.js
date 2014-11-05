@@ -4,7 +4,7 @@
  * TrainController
  * @constructor
  */
-var TrainController = function($scope, $http) {
+var TrainController = function($scope, $http, $window,$rootScope) {
     $scope.train = {};
     $scope.editMode = false;
 
@@ -63,7 +63,7 @@ var TrainController = function($scope, $http) {
         $scope.resetError();
 
         $http.delete('trains/removeAllTrains').success(function() {
-            $scope.fetchTrainsList();
+            alert("removeAllTrains called");
         }).error(function() {
             $scope.setError('Could not remove all trains');
         });

@@ -2,7 +2,7 @@
 
 var SMS = {};
 
-var App = angular.module('SMS', ['SMS.filters', 'SMS.services', 'SMS.directives']);
+var App = angular.module('SMS', ['SMS.filters', 'SMS.services', 'SMS.directives','ngCookies']);
 
 // Declare app level module which depends on filters, and services
 App.config(['$routeProvider', function ($routeProvider) {
@@ -26,7 +26,12 @@ App.config(['$routeProvider', function ($routeProvider) {
         controller: LoginController
     });
     
+    $routeProvider.when('/students', {
+        templateUrl: 'students/layout',
+        controller: StudentsListController
+    });
     
-
     $routeProvider.otherwise({redirectTo: '/logins'});
+    
+    
 }]);

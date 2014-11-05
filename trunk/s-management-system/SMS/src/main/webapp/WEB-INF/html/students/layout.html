@@ -1,0 +1,65 @@
+<div class="dashboard">
+	
+	<div class="admission-dashboard" >
+		<div class="student-menu" style="float:left;width:200px" >
+			<div>
+				<table>
+					<thead>
+						<tr><th>Manage Students</th></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a>Students List</a><Span style="font-size:12px;"></br> All students List</Span></td>
+						</tr>
+						<tr>
+							<td><a>Create New Student</a><span style="font-size:12px;"></br>New Admission</span></td>
+						</tr>
+						<tr>
+							<td><a>Manage Student Category</a><span style="font-size:12px;"></br>Manage students Category</span></td>
+						</tr>
+						<tr></tr>
+					</tbody>
+				</table>
+				</hr>
+				<table>
+					<thead>
+						<tr><th>Manage Guardians</th></tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a>list Guardians</a><span style="font-size:12px;"></br>All Guardians Details</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="admission-graph" style="float:right;">
+		<table class="admission-table">
+			<caption>Recent Admissions</caption>
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Student Name</th>
+					<th>Admission No</th>
+					<th>Course/Batch</th>
+					<th>Gender</th>
+					<th>Father Name</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="studentInfo in studentsInfo | orderBy:predicate">
+					<td><a>{{studentInfo.student.admissionDate}}</a></td>
+					<td><a>{{studentInfo.student.firstName}}</a></td>
+					<td><a>{{studentInfo.student.registrationNo}}</a></td>
+					<td>{{studentInfo.student.category}}</td>
+					<td>{{studentInfo.student.gender}}</td>
+					<td>{{studentInfo.contactDetail.guardianFirstName}}</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		<div class="recent-admission-table">
+		</div>
+	</div>
+
+</div>
